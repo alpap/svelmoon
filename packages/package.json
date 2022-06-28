@@ -1,0 +1,49 @@
+{
+  "name": "svelmoon",
+  "description": "The main package containing all base components.",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./lib/index.js",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpap/svelmoon.git",
+    "directory": "packages"
+  },
+  "author": "alpap",
+  "homepage": "https://github.com/alpap/svelmoon/README.md",
+  "bugs": {
+    "url": "https://github.com/alpap/svelmoon/issues"
+  },
+  "files": [
+    "src/componets",
+    "src",
+    "types"
+  ],
+  "module": "./src/index.js",
+  "keywords": [
+    "svelte",
+    "sveltejs",
+    "svelmoon",
+    "halfmoon",
+    "component-library",
+    "svelte-halfmoon",
+    "ui"
+  ],
+  "svelte": "./src/index.js",
+  "devDependencies": {
+    "fdir": "^5.2.0",
+    "sveld": "^0.17.2",
+    "svelte": "^3.48.0"
+  },
+  "scripts": {
+    "index": "node ./src/util/generate_index.cjs ./src/components",
+    "types": "node --experimental-json-modules gentypes.js",
+    "build": "yarn index && yarn types && echo \"export * from 'svelte-tabler'\">> src/index.js"
+  },
+  "dependencies": {
+    "halfmoon": "^1.1.1",
+    "svelte-tabler": "^0.1.4"
+  }
+}
