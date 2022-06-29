@@ -6,7 +6,7 @@
   let id = (Math.random() + 1).toString(36)
 </script>
 
-<div {...$$restProps} {disabled} class={`custom-checkbox ${$$restProps.class ? $$restProps.class : ''}`} class:d-inline-block={inline}>
-  <input type="checkbox" {id} value="" bind:checked />
+<div {...$$restProps} class={`custom-checkbox ${$$restProps.class ? $$restProps.class : ''}`} class:d-inline-block={inline}>
+  <input type="checkbox" {disabled} on:click {id} value="" bind:checked />
   <label for={id}>{label}</label>
 </div>
