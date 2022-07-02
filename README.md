@@ -4,3 +4,4 @@ navbar
 sidebar
 tables
 form
+alerts
