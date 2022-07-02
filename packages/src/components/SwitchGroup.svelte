@@ -4,8 +4,8 @@
   export let disabled: boolean = false
   export let name: string = ''
   export let space: string = ''
-  export let items: { label: ''; value: '' }[] = []
-  export let selected: string[] = []
+  export let items: { label: string; value: string | number }[] = []
+  export let selected: Array<string | number> = new Array<string | number>()
   export let single: boolean = false
 </script>
 
